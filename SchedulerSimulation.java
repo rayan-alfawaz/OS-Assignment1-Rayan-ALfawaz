@@ -30,6 +30,7 @@ class Process implements Runnable {
     private int timeQuantum; // Time slice (time quantum) allowed per CPU access (in milliseconds)
     private int remainingTime; // Time left for the process to finish its execution
     private int priority; 
+    private int contextSwitchCount = 0;
 
     // Constructor to initialize the process with name, burst time, and time quantum
     public Process(String name, int burstTime, int timeQuantum) {
@@ -42,7 +43,16 @@ class Process implements Runnable {
 
     public int getPriority() {
     return priority;
+    }
+
+    public void incrementContextSwitch() {
+    this.contextSwitchCount++;
+    }
+
+    public int getContextSwitchCount() {
+    return contextSwitchCount;
 }
+
     // This method will be called when the thread for this process is started
     @Override
     public void run() {
@@ -86,6 +96,7 @@ class Process implements Runnable {
         
         // If the process still has remaining time, it yields CPU for the next process
         if (remainingTime > 0) {
+            incrementContextSwitch();
             System.out.println(Colors.BLUE + "  ↻ " + Colors.CYAN + name + Colors.RESET + 
                               " yields CPU for context switch" + Colors.RESET);
         } else {
@@ -169,6 +180,8 @@ public class SchedulerSimulation {
         // Map to associate each thread with its respective process object
         Map<Thread, Process> processMap = new HashMap<>();
         
+        int totalContextSwitches = 0;
+
         // Print simulation header with elegant formatting
         System.out.println("\n" + Colors.BOLD + Colors.BRIGHT_CYAN + 
                           "╔═══════════════════════════════════════════════════════════════════════════════════════╗" + 
@@ -258,6 +271,7 @@ public class SchedulerSimulation {
             if (!process.isFinished()) {
                 // If the process still has remaining time, check if there are more processes in queue
                 if (!processQueue.isEmpty()) {
+                    totalContextSwitches++;
                     // Re-enqueue the process to give it another chance to run in the next round
                     addProcessToQueue(process, processQueue, processMap);
                 } else {
@@ -281,6 +295,7 @@ public class SchedulerSimulation {
         System.out.println(Colors.BOLD + Colors.BRIGHT_GREEN + 
                           "╚════════════════════════════════════════════════════════════════════════════════╝" + 
                           Colors.RESET + "\n");
+        System.out.println(Colors.BOLD + Colors.YELLOW + "  🔄 Total Context Switches: " + Colors.RESET + Colors.BRIGHT_YELLOW + totalContextSwitches + Colors.RESET + "\n");
     }
     
     // Method to add a process to the queue and map, while printing a "ready" message

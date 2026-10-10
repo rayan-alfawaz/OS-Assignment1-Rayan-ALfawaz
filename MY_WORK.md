@@ -176,16 +176,19 @@
 
 ---
 
-### Entry 4 - [Date and Time]
-**What I did**:
+### Entry 4 - [October 8, 2026, 8:00 PM]
+**What I did**:Implemented Feature 3 (Waiting Time Tracking and Summary Table)
 
 **Details**:
+- Used `System.currentTimeMillis()` to record `arrivalTime` upon process creation and `completionTime` when execution ends.
+- Calculated `turnaroundTime` and `waitingTime` using scheduling formulas.
+- Built a final summary table to display the results.
+  
+**Challenges**:The summary table was printing duplicate processes because processes were re-added to the queue multiple times during Round-Robin.
 
-**Challenges**:
+**Solution**:Used `new java.util.LinkedHashSet<>(processMap.values())` in the loop to filter out duplicates while printing the table.
 
-**Solution**:
-
-**Time spent**:
+**Time spent**: 1 hour
 
 ---
 

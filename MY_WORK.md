@@ -31,9 +31,9 @@
 |-------|-------------|
 | **Full Name** | [Rayan Ibrahim AlFawaz] |
 | **Student ID** | [446050856] |
-| **University Email** | [446050856@std.psau.edu.sa |
+| **University Email** | [446050856@std.psau.edu.sa] |
 | **GitHub Username** | [rayan-alfawaz] |
-| **Repository Link** | [[Paste your repository link here](https://github.com/rayan-alfawaz/OS-Assignment1-Rayan-ALfawaz)] |
+| **Repository Link** | [(https://github.com/rayan-alfawaz/OS-Assignment1-Rayan-ALfawaz)] |
  
 ---
 

@@ -192,16 +192,19 @@
 
 ---
 
-### Entry 5 - [Date and Time]
-**What I did**:
+### Entry 5 - [October 10, 2026, 2:30 AM]
+**What I did**:Code Documentation and MY_WORK.md Finalization
 
 **Details**:
+- Added clear explanatory comments for all Part 2 features directly in `SchedulerSimulation.java`.
+- Filled out my personal information in the MY_WORK.md file.
+- Completed the development log section.
+  
+**Challenges**:Formatting the Markdown tables properly to ensure it displays correctly on GitHub.
 
-**Challenges**:
+**Solution**:Used VS Code's Markdown preview feature to verify all formatting before committing and pushing the final version.
 
-**Solution**:
-
-**Time spent**:
+**Time spent**:45 minutes
 
 ---
 

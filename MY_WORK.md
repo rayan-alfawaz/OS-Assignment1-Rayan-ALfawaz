@@ -129,16 +129,19 @@
 
 ## Your Development Log
 
-### Entry 1 - [Date and Time]
-**What I did**:
+### Entry 1 - [October 4, 2026, 4:00 PM]
+**What I did**:Forked the repository and set up my student ID
 
 **Details**:
+- Cloned the repository to my local machine.
+- Set up the VS Code environment to start editing the code.
+- Modified the `studentID` variable to my actual university ID (446050856).
+  
+**Challenges**: Making sure the student ID was placed correctly so the random generator uses it as a seed.
 
-**Challenges**:
-
-**Solution**:
-
-**Time spent**:
+**Solution**: Located line 150 in `SchedulerSimulation.java` and correctly replaced the default ID string.
+  
+**Time spent**: 30 minutes
 
 ---
 

@@ -225,13 +225,13 @@
 
 > 💡 **TIP:** Fill this in **last**, after all entries are written.
 
-**Total time spent on assignment**: [X hours]
+**Total time spent on assignment**: [4 hours]
 
-**Most challenging part**:
+**Most challenging part**: Fixing the waiting time summary table. Since the simulation uses Round-Robin scheduling, processes were re-added to the queue multiple times, which caused duplicates in my final printout. I had to figure out a way to filter them out using a `LinkedHashSet` while keeping the correct order.
 
-**Most interesting learning**:
+**Most interesting learning**: Seeing exactly how a CPU handles Context Switching. Before this assignment, it was just a theoretical concept in the textbook, but tracking the exact moment a process yields the CPU and incrementing the counter made it very clear and practical.
 
-**What I would do differently next time**:
+**What I would do differently next time**: I would trace the logic of the scheduling algorithms and variables on paper first, especially for tracking the arrival and completion times, before writing the actual code. This would have saved me time when debugging the final summary table.
 
 ---
 

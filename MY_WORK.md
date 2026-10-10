@@ -145,16 +145,19 @@
 
 ---
 
-### Entry 2 - [Date and Time]
-**What I did**:
+### Entry 2 - [October 4, 2026, 6:30 PM]
+**What I did**:Implemented Feature 1 (Process Priority)
 
 **Details**:
+- Added a `priority` variable in the `Process` class.
+- Initialized it with a random number between 1 and 10 inside the constructor.
+- Updated `addProcessToQueue` to print the priority when a process enters the queue.
+- 
+**Challenges**:Displaying the priority values without altering the existing UI format or breaking the Round-Robin FIFO order.
 
-**Challenges**:
+**Solution**:Used `new Random().nextInt(10) + 1` for generation and carefully placed the print statement within the existing UI box drawing logic.
 
-**Solution**:
-
-**Time spent**:
+**Time spent**: 45 minutes
 
 ---
 

@@ -161,16 +161,18 @@
 
 ---
 
-### Entry 3 - [Date and Time]
-**What I did**:
+### Entry 3 - [October 8, 2026, 5:00 PM]
+**What I did**:Implemented Feature 2 (Context Switch Counter)
 
 **Details**:
+- Added a `contextSwitchCount` in the `Process` class and a static `totalContextSwitches` variable in `SchedulerSimulation`.
+- Added logic to increment the counter every time a process yields the CPU.
 
-**Challenges**:
+**Challenges**:Determining the exact condition to count a context switch without counting finished processes as a switch.
 
-**Solution**:
+**Solution**:Added the increment logic inside the specific `if (remainingTime > 0)` branch before re-adding the process to the queue.
 
-**Time spent**:
+**Time spent**: 45 minutes
 
 ---
 

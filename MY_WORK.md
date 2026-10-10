@@ -251,7 +251,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[Through this assignment, I gained a deep practical understanding of how Java manages concurrent execution using threads and the Runnable interface. I learned how to initialize thread objects, start them using Thread.start(), and properly handle synchronization and coordination within a Round-Robin CPU scheduling simulation. It was fascinating to see how the simulation mimics real operating system behavior by allocating time quantums and having threads yield or run to completion. Moreover, I realized the critical role that proper thread lifecycle management plays in ensuring that multiple processes can compete for processor time fairly without deadlock or corruption. Finally, this project bridged the gap between theoretical textbook concepts of concurrency and actual code implementation, significantly improving my Java programming skills.]
 
 ## Question 2: What was the most challenging part of this assignment?
 
@@ -259,7 +259,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[The most challenging part of this assignment was implementing the waiting time tracking feature and resolving duplicate entries in the final summary table. Because the Round-Robin algorithm repeatedly re-enqueues unfinished processes back into the ready queue, each process appeared multiple times in data structures, causing the summary printout to duplicate process statistics. This was difficult to debug because it required carefully tracing the lifecycle of each process from its initial creation until its final completion state. Furthermore, ensuring that calculations for turnaround time and waiting time remained mathematically accurate across multiple quantum interruptions required a deep dive into the simulation's loop logic. Overcoming this hurdle demanded extensive testing and a clear restructuring of how process completion records were aggregated.]
 
 ## Question 3: How did you overcome the challenges you faced?
 
@@ -267,7 +267,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[I overcame these challenges by systematically breaking down the problem, re-reading the assignment requirements, and utilizing strategic debugging techniques. First, I added temporary print statements (System.out.println) at critical points inside the scheduler loop to monitor when processes entered and left the queue. When I identified that duplicate process objects were causing the table display issues, I researched and implemented a LinkedHashSet to filter out duplicates while preserving the original execution order. Additionally, I tested my modifications incrementally after every small change to verify that the core Round-Robin scheduling logic and the ANSI color-coded outputs remained intact. This step-by-step debugging approach allowed me to isolate errors quickly and ensure the final output matched the expected format.]
 
 ## Question 4: How can you apply multithreading concepts in real-world applications?
 
@@ -275,7 +275,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[Multithreading concepts are fundamental in modern software engineering and can be applied to build highly responsive, high-performance applications. For instance, in desktop or mobile applications, developers use background threads to handle heavy network requests, file I/O, or database queries, preventing the main user interface thread from freezing. Another prominent real-world example is video game development, where separate threads handle rendering, physics calculations, and artificial intelligence simultaneously to maintain a smooth frame rate. Understanding CPU scheduling and time-slicing algorithms helps software engineers design efficient resource allocation systems where multiple tasks share system resources fairly and execute concurrently without blocking one another.]
 
 ### Optional: What would you like to learn more about?
 
